@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 5rem;
+    padding: 1.25rem 8.75rem;
+
+    display: flex;
+    gap: 24.375rem;
+    
+    background-color: rgba(9, 33, 42, 1);
+}
+
+main {
+    max-width: 90rem;
+    width: 100%;
+    margin: 0 auto;
+    
+    display: flex;
+    gap: 10rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    width: 100%;
+    height: 8rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url(../assets/img/Subtract.svg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+}
+
+.impressum {
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo-enterprise {
+    width: 8.375rem;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright{
+    font-family:'Figtree';
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: rgba(153, 172, 179, 1);
+}
+
