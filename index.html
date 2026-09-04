@@ -8,7 +8,8 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./style/style.css">
     <link rel="stylesheet" href="./style/fonts.css">
-    <script src="./js/main.js" defer></script>
+    <script src="js/db.js" defer></script>
+    <script src="js/main.js" defer></script>
 </head>
 
 <body>
@@ -18,18 +19,25 @@
         </div>
     </header>
     <main>
-        <h1 tabindex="0">My personal Photo album</h1>
-        <div id="photo-album" class="photoalbum">
-        </div>
-        <dialog>
-            <div>
-            <h2></h2>
-            <button></button>
+        <div class="photogallery">
+            <h1 tabindex="0">My personal Photo album</h1>
+            <div id="gallery" class="gallery">
             </div>
-            <div>
-                <button></button>
-                <span></span>
-                <button></button>
+        </div>
+        <dialog id="dialog" class="dialog">
+            <div class="dialog-wrapper">
+                <div id="dialog-header" class="dialog-header">
+                    <h2>TEST</h2>
+                    <button>X</button>
+                </div>
+                <div id="dialog-img" class="dialog-img">
+
+                </div>
+                <div class="dialog-navigation">
+                    <button id="button-left"><</button>
+                    <span id="dialog-span"></span>
+                    <button id="button-right">></button>
+                </div>
             </div>
         </dialog>
     </main>
@@ -45,4 +53,5 @@
         </div>
     </footer>
 </body>
+
 </html>

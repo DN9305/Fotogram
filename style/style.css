@@ -1,32 +1,38 @@
+/* Mark: SETTINGS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-header{
+/* Mark: HEADER */
+
+header {
     width: 100%;
     height: 5rem;
     padding: 1.25rem 8.75rem;
 
     display: flex;
     gap: 24.375rem;
-    
+
     background-color: rgba(9, 33, 42, 1);
 }
+
+/* Mark: CONTENT */
 
 main {
     flex: 1;
     max-width: 90rem;
     width: 100%;
     margin: 0 auto;
-    
+
     display: flex;
     gap: 10rem;
     flex-direction: column;
@@ -34,7 +40,120 @@ main {
     align-items: center;
 }
 
-footer{
+.photogallery {
+    height: auto;
+    width: 100%;
+    max-width: 73.125rem;
+
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gallery {
+    height: auto;
+    width: 100%;
+
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery>img {
+    width: 9.375rem;
+    height: 9.375rem;
+
+
+    object-fit: contain;
+    object-position: center;
+    display: block;
+
+
+    background-color: black;
+    border: solid 2px black;
+    border-radius: 15px;
+
+    &:hover {
+        cursor: pointer;
+        scale: 1.5;
+        background: linear-gradient(to right, red, blue);
+    }
+
+    &#img_0:hover,
+    &#img_3:hover,
+    &#img_6:hover,
+    &#img_10:hover {
+        scale: 1.5;
+        background: linear-gradient(to bottom, red, blue);
+    }
+}
+
+/* Mark: DIALOG */
+
+.dialog {
+    max-width: 43rem;
+    max-height: 42.125rem;
+    margin: auto;
+    padding: 56px 64px;
+
+    border-radius: 20px;
+}
+
+.dialog-wrapper {
+    height: auto;
+    width: 100%;
+    max-width: 35rem;
+    margin: 0 auto;
+
+    display: flex;
+    gap: 48px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dialog-header {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.dialog-img {
+    height: auto;
+    width: 100%;
+}
+
+.dialog-img>img {
+    height: 375px;
+    width: 560px;
+
+    object-fit: contain;
+    object-position: center;
+    display: block;
+
+    background: linear-gradient(to right, red, blue);
+
+    &#dialog-img_0,
+    &#dialog-img_3,
+    &#dialog-img_6,
+    &#dialog-img_7,
+    &#dialog-img_8,
+    &#dialog-img_10 {
+        background: linear-gradient(to bottom, red, blue);
+    }
+}
+
+.dialog-navigation {
+    width: 260px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Mark: FOOTER */
+
+footer {
     width: 100%;
     height: 8rem;
 
@@ -63,10 +182,9 @@ footer{
     justify-content: space-between;
 }
 
-.copyright{
-    font-family:'Figtree';
+.copyright {
+    font-family: 'Figtree';
     font-weight: 400;
     font-size: 0.875rem;
     color: rgba(153, 172, 179, 1);
 }
-
