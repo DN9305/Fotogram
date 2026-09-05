@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 
-*:focus{
+*:focus {
     outline: 5px solid green;
 }
 
@@ -110,18 +110,14 @@ h2 {
     }
 
     &:focus {
-        outline: none;
-        cursor: pointer;
-        scale: 1.5;
-        background: linear-gradient(to right, red, blue);
+        outline: 3px solid white;
     }
 
     &#img_0:focus,
     &#img_3:focus,
     &#img_6:focus,
     &#img_10:focus {
-        scale: 1.5;
-        background: linear-gradient(to bottom, red, blue);
+        outline: 3px solid white;
     }
 }
 
@@ -196,8 +192,9 @@ h2 {
 }
 
 .dialog-navigation {
-    height: 60px;
-    width: 260px;
+    height: auto;
+    width: 100%;
+    max-width: 260px;
 
     display: flex;
     align-items: center;
@@ -278,6 +275,22 @@ footer {
         &#img_10:hover {
             scale: 1;
         }
+
+        &:focus {
+            scale: 1;
+        }
+
+        &#img_0:focus,
+        &#img_3:focus,
+        &#img_6:focus,
+        &#img_10:focus {
+            scale: 1;
+        }
+    }
+
+    .dialog[open] {
+        padding-bottom: 25px;
+        padding-top: 25px;
     }
 
     .dialog-header {
@@ -288,6 +301,7 @@ footer {
         flex-direction: column-reverse;
         align-items: flex-end;
     }
+
 
     h2 {
         align-self: flex-start;
