@@ -93,27 +93,26 @@ main {
 /* Mark: DIALOG */
 
 .dialog {
-    max-width: 43rem;
-    max-height: 42.125rem;
-    margin: auto;
-    padding: 56px 64px;
-
-    border-radius: 20px;
+    display: none;
 }
 
-.dialog-wrapper {
-    height: auto;
+.dialog[open] {
     width: 100%;
-    max-width: 35rem;
-    margin: 0 auto;
+    max-width: 43rem;
+    height: 42.125rem;
+    margin: auto;
+    padding: 56px 64px;
 
     display: flex;
     gap: 48px;
     flex-direction: column;
     align-items: center;
+
+    border-radius: 20px;
 }
 
 .dialog-header {
+    height: auto;
     width: 100%;
 
     display: flex;
@@ -121,13 +120,13 @@ main {
 }
 
 .dialog-img {
-    height: auto;
-    width: 100%;
+    height: 23.4375rem;
+    width: 35rem;
 }
 
 .dialog-img>img {
-    height: 375px;
-    width: 560px;
+    height: 100%;
+    width: 100%;
 
     object-fit: contain;
     object-position: center;
@@ -146,8 +145,11 @@ main {
 }
 
 .dialog-navigation {
+    height: 60px;
     width: 260px;
+
     display: flex;
+    align-items: center;
     justify-content: space-between;
 }
 
