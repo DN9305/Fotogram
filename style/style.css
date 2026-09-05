@@ -29,9 +29,11 @@ header {
 
 main {
     flex: 1;
+    z-index: -1;
     max-width: 90rem;
     width: 100%;
-    margin: 0 auto;
+    margin: -100px auto;
+    padding: 200px 50px;
 
     display: flex;
     gap: 10rem;
@@ -39,7 +41,12 @@ main {
     justify-content: center;
     align-items: center;
 
-    background-color: rgba(6, 23, 30, 1);
+    background-color: rgb(12, 171, 240);
+}
+
+h1{
+    font-family: 'Figtree';
+    font-size: 2rem;
 }
 
 .photogallery {
@@ -103,14 +110,28 @@ main {
     max-width: 43rem;
     height: 42.125rem;
     margin: auto;
-    padding: 56px 64px;
+    padding: 56px 60px;
 
     display: flex;
     gap: 48px;
     flex-direction: column;
     align-items: center;
 
+    background: linear-gradient(to right, red, blue);
     border-radius: 20px;
+}
+
+.dialog::backdrop {
+    backdrop-filter: blur(15px);
+}
+
+.dialog button {
+    width: 40px;
+    height: 40px;
+
+    background-color: rgb(248, 4, 207);
+    border: 3px solid yellow;
+    border-radius: 50%;
 }
 
 .dialog-header {
@@ -132,8 +153,8 @@ main {
 
     object-fit: contain;
     object-position: center;
-    display: block;
 
+    border-radius: 25px;
     background: linear-gradient(to right, red, blue);
 
     &#dialog-img_0,
@@ -191,4 +212,26 @@ footer {
     font-weight: 400;
     font-size: 0.875rem;
     color: rgba(153, 172, 179, 1);
+}
+
+@media screen and (max-width:768px) {
+    header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 480px){
+    main{
+        padding: 200px 8px;
+    }
+    
+    h1{
+        font-size: 1.5rem;
+    }
+
+    .gallery{
+        gap:0.5rem;
+    }
 }
