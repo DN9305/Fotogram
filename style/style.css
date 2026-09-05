@@ -36,8 +36,8 @@ main {
     flex: 1;
     max-width: 90rem;
     width: 100%;
-    margin: -100px auto;
-    padding: 200px 50px;
+    margin: -6.25rem auto;
+    padding: 12.5rem 3.125rem;
 
     display: flex;
     gap: 10rem;
@@ -132,10 +132,10 @@ h2 {
     max-width: 43rem;
     height: 42.125rem;
     margin: auto;
-    padding: 56px clamp(1.25rem, -0.536rem + 8.929vw, 3.75rem);
+    padding: 3.5rem clamp(1.25rem, -0.536rem + 8.929vw, 3.75rem);
 
     display: flex;
-    gap: 48px;
+    gap: 3rem;
     flex-direction: column;
     align-items: center;
 
@@ -148,8 +148,8 @@ h2 {
 }
 
 .dialog button {
-    width: 40px;
-    height: 40px;
+    width: 2.5rem;
+    height: 2.5rem;
 
     cursor: pointer;
 
@@ -194,7 +194,7 @@ h2 {
 .dialog-navigation {
     height: auto;
     width: 100%;
-    max-width: 260px;
+    max-width: 16.25rem;
 
     display: flex;
     align-items: center;
@@ -253,7 +253,7 @@ footer {
 
 @media screen and (max-width: 480px) {
     main {
-        padding: 200px 8px;
+        padding: 12.5rem 0.5rem;
     }
 
     h1 {
@@ -289,8 +289,8 @@ footer {
     }
 
     .dialog[open] {
-        padding-bottom: 25px;
-        padding-top: 25px;
+        padding-bottom: 1.5625rem;
+        padding-top: 1.5625rem;
     }
 
     .dialog-header {
