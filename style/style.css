@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+*:focus{
+    outline: 5px solid green;
+}
+
 body {
     min-height: 100vh;
     display: flex;
@@ -15,6 +19,7 @@ body {
 /* Mark: HEADER */
 
 header {
+    z-index: 1;
     width: 100%;
     height: 5rem;
     padding: 1.25rem 8.75rem;
@@ -29,7 +34,6 @@ header {
 
 main {
     flex: 1;
-    z-index: -1;
     max-width: 90rem;
     width: 100%;
     margin: -100px auto;
@@ -44,8 +48,15 @@ main {
     background-color: rgb(12, 171, 240);
 }
 
-h1{
+h1 {
     font-family: 'Figtree';
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+h2 {
+    font-family: 'Figtree';
+    font-weight: 700;
     font-size: 2rem;
 }
 
@@ -97,6 +108,21 @@ h1{
         scale: 1.5;
         background: linear-gradient(to bottom, red, blue);
     }
+
+    &:focus {
+        outline: none;
+        cursor: pointer;
+        scale: 1.5;
+        background: linear-gradient(to right, red, blue);
+    }
+
+    &#img_0:focus,
+    &#img_3:focus,
+    &#img_6:focus,
+    &#img_10:focus {
+        scale: 1.5;
+        background: linear-gradient(to bottom, red, blue);
+    }
 }
 
 /* Mark: DIALOG */
@@ -110,7 +136,7 @@ h1{
     max-width: 43rem;
     height: 42.125rem;
     margin: auto;
-    padding: 56px 60px;
+    padding: 56px clamp(1.25rem, -0.536rem + 8.929vw, 3.75rem);
 
     display: flex;
     gap: 48px;
@@ -129,6 +155,8 @@ h1{
     width: 40px;
     height: 40px;
 
+    cursor: pointer;
+
     background-color: rgb(248, 4, 207);
     border: 3px solid yellow;
     border-radius: 50%;
@@ -144,7 +172,7 @@ h1{
 
 .dialog-img {
     height: 23.4375rem;
-    width: 35rem;
+    max-width: 35rem;
 }
 
 .dialog-img>img {
@@ -155,7 +183,7 @@ h1{
     object-position: center;
 
     border-radius: 25px;
-    background: linear-gradient(to right, red, blue);
+    background: rgba(255, 0, 0, 0);
 
     &#dialog-img_0,
     &#dialog-img_3,
@@ -163,7 +191,7 @@ h1{
     &#dialog-img_7,
     &#dialog-img_8,
     &#dialog-img_10 {
-        background: linear-gradient(to bottom, red, blue);
+        background: rgba(255, 0, 0, 0);
     }
 }
 
@@ -220,18 +248,48 @@ footer {
         justify-content: center;
         align-items: center;
     }
+
+    .dialog {
+        height: 100vh;
+    }
 }
 
-@media screen and (max-width: 480px){
-    main{
+@media screen and (max-width: 480px) {
+    main {
         padding: 200px 8px;
     }
-    
-    h1{
+
+    h1 {
         font-size: 1.5rem;
     }
 
-    .gallery{
-        gap:0.5rem;
+    .gallery {
+        gap: 0.2rem;
+    }
+
+    .gallery>img {
+        &:hover {
+            scale: 1;
+        }
+
+        &#img_0:hover,
+        &#img_3:hover,
+        &#img_6:hover,
+        &#img_10:hover {
+            scale: 1;
+        }
+    }
+
+    .dialog-header {
+        height: auto;
+        width: 100%;
+
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
+
+    h2 {
+        align-self: flex-start;
     }
 }
