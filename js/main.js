@@ -19,7 +19,7 @@ function addPhotosToGallery() {
     let galleryElems = "";
 
     for (let i = 0; i < IMAGE_CONTAINER.length; i++) {
-        galleryElems += `<img id="img_${i}" tabindex="0" src="${IMAGE_CONTAINER[i].path}" alt="${IMAGE_CONTAINER[i].alt}" onclick="openDialog(${i})" onkeypress='if(event.key=="Enter"){openDialog(${i})}' aria-label="opens Dialog with the same Picture scaled">`
+        galleryElems += `<img id="img_${i}" tabindex="0" src="${IMAGE_CONTAINER[i].path}" alt="${IMAGE_CONTAINER[i].alt}" onclick="openDialog(${i})" onkeypress='if(event.key=="Enter"){openDialog(${i})}' aria-label="opens Dialog with the same Picture scaled" role="button">`
     };
 
     GALLERY.innerHTML = galleryElems;

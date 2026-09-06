@@ -153,6 +153,7 @@ h2 {
 
     cursor: pointer;
 
+    font-size: 2rem;
     background-color: rgb(248, 4, 207);
     border: 3px solid yellow;
     border-radius: 50%;
@@ -239,6 +240,8 @@ footer {
     color: rgba(153, 172, 179, 1);
 }
 
+/* Mark: max768px */
+
 @media screen and (max-width:768px) {
     header {
         display: flex;
@@ -250,6 +253,8 @@ footer {
         height: 100vh;
     }
 }
+
+/* Mark: max480px */
 
 @media screen and (max-width: 480px) {
     main {
@@ -289,8 +294,14 @@ footer {
     }
 
     .dialog[open] {
+        height: 100vh;
+        max-height: 100%;
+        width: 100vw;
+        margin: 0;
         padding-bottom: 1.5625rem;
         padding-top: 1.5625rem;
+
+        justify-content: space-between;
     }
 
     .dialog-header {
