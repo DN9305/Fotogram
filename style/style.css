@@ -98,25 +98,9 @@ h2 {
     &:hover {
         cursor: pointer;
         scale: 1.5;
-        background: linear-gradient(to right, red, blue);
-    }
-
-    &#img_0:hover,
-    &#img_3:hover,
-    &#img_6:hover,
-    &#img_10:hover {
-        scale: 1.5;
-        background: linear-gradient(to bottom, red, blue);
     }
 
     &:focus {
-        outline: 3px solid white;
-    }
-
-    &#img_0:focus,
-    &#img_3:focus,
-    &#img_6:focus,
-    &#img_10:focus {
         outline: 3px solid white;
     }
 }
@@ -181,15 +165,6 @@ h2 {
 
     border-radius: 25px;
     background: rgba(255, 0, 0, 0);
-
-    &#dialog-img_0,
-    &#dialog-img_3,
-    &#dialog-img_6,
-    &#dialog-img_7,
-    &#dialog-img_8,
-    &#dialog-img_10 {
-        background: rgba(255, 0, 0, 0);
-    }
 }
 
 .dialog-navigation {
@@ -200,6 +175,13 @@ h2 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.dialog span {
+    font-family: 'Figtree';
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: aqua;
 }
 
 /* Mark: FOOTER */
@@ -273,22 +255,7 @@ footer {
         &:hover {
             scale: 1;
         }
-
-        &#img_0:hover,
-        &#img_3:hover,
-        &#img_6:hover,
-        &#img_10:hover {
-            scale: 1;
-        }
-
         &:focus {
-            scale: 1;
-        }
-
-        &#img_0:focus,
-        &#img_3:focus,
-        &#img_6:focus,
-        &#img_10:focus {
             scale: 1;
         }
     }
